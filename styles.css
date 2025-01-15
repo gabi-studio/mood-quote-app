@@ -1,0 +1,199 @@
+/* glow gradient background that is centered, stretches the whole screen, and does not repeat
+centered text -- 
+smooth transition to other divs/pages (the quote part)*/
+body {
+    background-image: url("images/background-glow.png"); 
+    background-size:cover;  
+    background-position: center;  /* Center the image */
+    background-repeat: no-repeat;  /* Prevent the image from repeating */
+    transition: background-image 1s ease-in-out;  /*Smooth transition for mood changes */
+    color: #241d16;
+}
+
+/* app name/title*/
+
+h1 {
+    margin:140px 150px 30px 150px;
+    font-size: 60px;
+    font-family: "Hubballi", sans-serif;
+    color: #241d16;
+    opacity: 70%;
+    src: url("https://fonts.gstatic.com/s/hubballi/v7/o-0JIpUj3WIZ1RFN55BmwhF9Yg.woff2");
+    text-align: center;
+    transition: opacity 1s ease-in, visibility 1s ease-in;
+}
+
+/* app instructions*/
+h2 {
+    margin:10px 150px 60px 150px;
+    font-size: 30px;
+    font-family: "Hubballi", sans-serif;
+    color: #241d16;
+    opacity: 70%;
+    src: url("https://fonts.gstatic.com/s/hubballi/v7/o-0JIpUj3WIZ1RFN55BmwhF9Yg.woff2");
+    text-align: center;
+    transition: opacity 1s ease-in, visibility 1s ease-in;
+}
+
+/* a container to hold all the emotion buttons
+-- flex container 
+-- transition added for smooth fade*/
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 150px 20px 150px;
+    transition: opacity 1s ease-in, visibility 1s ease-in;
+}
+
+.button-calm {
+    background-color: #F7E7CE;
+}
+
+.button-happy {
+    background-color: #facb8a;
+}
+
+.button-motivated {
+    background-color: #fdb893;
+}
+
+.button-excited {
+    background-color: #febdb3;
+}
+
+.button-angry {
+    background-color: #fab8a7;
+}
+
+.button-anxious {
+    background-color: #FBD2FA;
+}
+
+.button-sad {
+    background-color: #DDE6FF;
+}
+
+.button-tired {
+    background-color: #E8E3F8;
+}
+
+
+
+/* general button styling */
+
+button {
+    padding: 0;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    width: 90px;
+    height: 90px;
+    border:none;
+    border-radius: 100%;
+    font-family: "Gaegu", sans-serif;
+    text-align: center;
+    box-shadow: 0 0 10px #ffffff64;
+    transition: transform 0.75s ease-in-out;
+}
+
+
+/* hover effect for buttons */
+button:hover {
+    box-shadow: 0 0 10px #ffffff64;
+    transform: scale(1.5);
+}
+
+
+/* styling for the quote section */
+#quote-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    height: 100vh; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    transition: opacity 1s ease-in, visibility 1s ease-in;
+   
+}
+
+/* transparent quote box */
+.quote-box {
+    background: transparent; 
+    border-radius: 20px;
+    padding: 40px 50px 30px 50px;
+    width: 80%;
+    height: 250px;
+    max-width: 800px;
+    text-align: center;
+    transition: opacity 1s ease-in, visibility 1s ease-in; 
+}
+
+/* initially hidden quote section
+smooth transition for quote-section */
+#quote-section {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in, visibility 1.5s ease-out;
+}
+
+/* visible class for the quote section*/
+#quote-section.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s ease-in, visibility 1.5s ease-out;
+}
+
+
+/* quote text styling */
+#quote-text {
+    font-size: 50px;
+    font-family: "Hubballi", sans-serif;
+    margin-bottom: 40px;
+    text-align: left;
+    color: #241d16;
+    visibility: visible;
+    transition: opacity 1s ease-in, visibility 1s ease-in;
+}
+
+/* copy quote and exit buttons inside the quote box */
+#copy-quote-button,
+#exit-quote-button {
+    margin: 30px;
+    padding: 3px 6px 3px 6px;
+    font-size: 18px;
+    height: 40px;
+    width: 120px;
+    font-family: "Hubballi", sans-serif;
+    background-color: #fff6f66b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: none;
+    
+
+    
+}
+
+/* hover effects for copy quote and exit buttons */
+#copy-quote-button:hover {
+    background-color: #fbf8f0bf;
+    transform: none;
+}
+
+#exit-quote-button:hover {
+    background-color: #fbf8f0bf;
+    transform: none;
+}
+
+/* copy quote success message styling */
+#copy-message {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5c3a02;
+    margin-top: 5px;
+    display: block;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InspireMe - select your mood to see a quote just for you</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hubballi">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gaegu">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+
+    <!-- app title/name: InspireMe-->
+    <h1 id="app-title">InspireMe</h1>
+
+    <!-- instructions for user on how to use the app-->
+    <h2 id ="app-instructions">How are you feeling today? Select your mood to see a quote just for you:</h2>
+
+
+    <!-- container for all the emotion buttons, make this flex in css-->
+    <div class="buttons-container">
+        <div>
+            <button class="button-calm">calm</button>
+        </div>
+        <div>
+            <button class="button-happy">happy</button>
+        </div>
+        <div>
+            <button class="button-motivated">motivated</button>
+        </div>
+        <div>
+            <button class="button-excited">excited</button>
+        </div>
+        <div>
+            <button class="button-angry">angry</button>
+        </div>
+        <div>
+            <button class="button-anxious">anxious</button>
+        </div>
+        <div>
+            <button class="button-sad">sad</button>
+        </div>
+        <div>
+            <button class="button-tired">tired</button>
+        </div>
+    </div>
+    
+    <!--quote section that will be initially hidden, will contain the quote text, copy button, and exit button-->
+    <div id="quote-section" style="display: none;">
+
+        <div class="quote-box">
+            <!--replace quote text here in the javascript using innerHTML-->
+            <p id="quote-text">Quote goes here</p>
+            <div class="quote-actions">
+                <button id="copy-quote-button">Copy Quote</button>
+                <button id="exit-quote-button">Home</button>
+            </div>
+            <!--message for when the copy quote button is clicked-->
+            <p id="copy-message" style="display: none;">Quote copied!</p>
+        </div>
+    </div>
+
+    
+</body>
+</html>
