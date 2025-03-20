@@ -2,12 +2,12 @@
 centered text -- 
 smooth transition to other divs/pages (the quote part)*/
 body {
-    background-image: url("images/background-glow.png"); 
-    background-size:cover;  
-    background-position: center;  /* Center the image */
-    background-repeat: no-repeat;  /* Prevent the image from repeating */
-    transition: background-image 1s ease-in-out;  /*Smooth transition for mood changes */
-    color: #241d16;
+    /* background-image: url("images/background-glow.png"); 
+    /* background-size:cover;  
+    /*background-position: center;  Center the image
+    /*background-repeat: no-repeat;  /* Prevent the image from repeating */
+    /*transition: background-image 1s ease-in-out;  Smooth transition for mood changes */
+    background-color: #fdfaf8;
 }
 
 /* app name/title*/
@@ -16,8 +16,8 @@ h1 {
     margin:140px 150px 30px 150px;
     font-size: 60px;
     font-family: "Hubballi", sans-serif;
-    color: #241d16;
-    opacity: 70%;
+    color: #1e1914;
+    opacity: 90%;
     src: url("https://fonts.gstatic.com/s/hubballi/v7/o-0JIpUj3WIZ1RFN55BmwhF9Yg.woff2");
     text-align: center;
     transition: opacity 1s ease-in, visibility 1s ease-in;
@@ -28,8 +28,8 @@ h2 {
     margin:10px 150px 60px 150px;
     font-size: 30px;
     font-family: "Hubballi", sans-serif;
-    color: #241d16;
-    opacity: 70%;
+    color: #1e1914;
+    opacity: 90%;
     src: url("https://fonts.gstatic.com/s/hubballi/v7/o-0JIpUj3WIZ1RFN55BmwhF9Yg.woff2");
     text-align: center;
     transition: opacity 1s ease-in, visibility 1s ease-in;
@@ -41,13 +41,14 @@ h2 {
 .buttons-container {
     display: flex;
     justify-content: space-around;
+    grid-gap: 20px;
     align-items: center;
     margin: 20px 150px 20px 150px;
     transition: opacity 1s ease-in, visibility 1s ease-in;
 }
 
 .button-calm {
-    background-color: #F7E7CE;
+    background-color: #f8e4c4;
 }
 
 .button-happy {
@@ -91,16 +92,16 @@ button {
     height: 90px;
     border:none;
     border-radius: 100%;
-    font-family: "Gaegu", sans-serif;
+    font-family: "Hubballi", sans-serif;
     text-align: center;
-    box-shadow: 0 0 10px #ffffff64;
+    box-shadow: 0 0 10px #8d8d8d64;
     transition: transform 0.75s ease-in-out;
 }
 
 
 /* hover effect for buttons */
 button:hover {
-    box-shadow: 0 0 10px #ffffff64;
+    box-shadow: 0 0 10px #8d8d8d64;
     transform: scale(1.5);
 }
 
@@ -196,4 +197,82 @@ smooth transition for quote-section */
     color: #5c3a02;
     margin-top: 5px;
     display: block;
+}
+
+/* media query for smaller screens */
+@media (max-width: 600px) {
+    /* h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 20px;
+    } */
+
+    .buttons-container {
+        display: grid;
+        /* show two rows of 4 columns*/
+        grid-template-columns: repeat(4, 1fr);
+        
+        
+    }
+
+    button {
+        width: 70px;
+        height: 70px;
+    }
+
+    .quote-box {
+        padding: 20px;
+    }
+
+    #quote-text {
+        font-size: 30px;
+    }
+
+    #copy-quote-button,
+    #exit-quote-button {
+        font-size: 15px;
+        height: 30px;
+        width: 100px;
+    }
+}
+
+/* media query for phones */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+    button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .buttons-container {
+        display: grid;
+        /* show two columns */
+        grid-template-columns: repeat(2, 1fr);
+        
+        
+    }
+
+    .quote-box {
+        padding: 10px;
+    }
+
+    #quote-text {
+        font-size: 20px;
+    }
+
+    #copy-quote-button,
+    #exit-quote-button {
+        font-size: 12px;
+        height: 25px;
+        width: 80px;
+    }
 }

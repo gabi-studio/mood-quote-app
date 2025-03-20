@@ -214,7 +214,7 @@ exitButton.onclick = function () {
         quoteSection.style.display = "none";
 
         // reset the background to the home page url
-        document.body.style.backgroundImage = "url('images/background-glow.png')";
+        document.body.style="background-color: #fdfaf8;";
 
         // show the emotion buttons, title, and instructions again
         buttonsContainer.style.display = "flex";
